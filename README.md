@@ -1,17 +1,40 @@
-# Automation Portfolio
+# Selenium Cucumber BDD Automation Framework
 
-Simple Selenium automation framework created for freelancing portfolio.
+Professional automation framework built using:
 
-## Tech Stack
 - Java
-- Selenium
+- Selenium WebDriver
+- Cucumber BDD
 - TestNG
 - Maven
-
-## Features
-- Sample test
 - Page Object Model
-- Clean structure
-- No secrets
 
-Created by Sai.
+## Framework Features
+
+- BDD Feature files
+- Step Definitions
+- Hooks for setup/teardown
+- Page Object Model
+- Config driven browser
+- Tags (@smoke, @regression)
+- HTML Cucumber Report
+
+## Run Tests
+
+mvn test
+
+## Structure
+
+src/test/java
+- pages
+- steps
+- runner
+- utils
+
+src/test/resources
+- features
+- config.properties
+
+## Author
+
+Sai Shankar (Senior Automation Engineer)

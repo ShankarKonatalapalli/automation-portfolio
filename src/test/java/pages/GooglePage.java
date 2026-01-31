@@ -9,10 +9,9 @@ public class GooglePage {
     public GooglePage(WebDriver driver){
         this.driver = driver;
     }
-
-    public void openGoogle(){
-        driver.get("https://www.google.com");
-    }
+public void openGoogle(){
+    driver.get(System.getProperty("baseUrl","https://www.google.com"));
+   }
 
     public String getTitle(){
         return driver.getTitle();
