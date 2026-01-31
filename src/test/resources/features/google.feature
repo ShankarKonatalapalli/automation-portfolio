@@ -1,11 +1,6 @@
 @smoke
-Feature: Google Search
+Feature: Google Search Automation
 
-  Scenario: Verify Google title
+  Scenario: Verify Google homepage
     Given user opens google homepage
-    Then page title should contain Google
-
-  @regression
-  Scenario: Open Google again
-    Given user opens google homepage
-    Then page title should contain Google
+    Then page title should contain "Google"
