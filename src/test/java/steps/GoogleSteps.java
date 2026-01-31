@@ -2,25 +2,21 @@ package steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import pages.GooglePage;
+import utils.Hooks;
 
 public class GoogleSteps {
 
-    WebDriver driver;
+    GooglePage googlePage = new GooglePage(Hooks.driver);
 
     @Given("user opens google homepage")
     public void openGoogle() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get("https://www.google.com");
+        googlePage.openGoogle();
     }
 
     @Then("page title should contain Google")
     public void verifyTitle() {
-        Assert.assertTrue(driver.getTitle().contains("Google"));
-        driver.quit();
+        Assert.assertTrue(googlePage.getTitle().contains("Google"));
     }
 }
